@@ -1,142 +1,558 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portifolio Website</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css"
-</head>
-<body>
-    <header class = "header">
-        <a href="#" class = "logo"><span>Victor Marinho</span></a>
-        <ul class = "nav-links">
-            <li>
-                <a href="#about">Sobre</a>
-            </li>
-            <li>
-                <a href="#experience">Experiência</a>
-            </li>
-            <li>
-                <a href="#projects">Projetos</a>
-            </li>
-        </ul>
-            
-        <i id ="menu-icon" class="fa-solid fa-bars"></i>
+    <meta name="description"
+        content="Portfólio de Victor Almeida Marinho Rego — estudante de Engenharia de Mecatrônica, focado em sistemas embarcados, IoT e desenvolvimento Front-End.">
+    <title>Victor Marinho | Portfólio</title>
 
-        <a  href="https://github.com/VictorAlmeidaMarinho" target="_blank" class="visit-btn" >Visite meu Github</a>    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        (function () {
+            var saved = localStorage.getItem('theme');
+            var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            document.documentElement.dataset.theme = saved || (prefersDark ? 'dark' : 'light');
+        })();
+    </script>
+
+</head>
+
+<body>
+
+    <!-- Barra de navegação -->
+    <header class="header" id="header">
+        <a href="#about" class="logo">Victor Marinho</a>
+
+        <nav aria-label="Navegação principal">
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#about" class="nav-link">Sobre</a></li>
+                <li><a href="#skills" class="nav-link">Habilidades</a></li>
+                <li><a href="#experience" class="nav-link">Experiência</a></li>
+                <li><a href="#projects" class="nav-link">Projetos</a></li>
+                <li><a href="#education" class="nav-link">Formação</a></li>
+                <li><a href="#contact" class="nav-link">Contato</a></li>
+            </ul>
+        </nav>
+
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Alternar para tema escuro"
+            aria-pressed="false">
+            <i class="fa-solid fa-moon"></i>
+        </button>
+
+        <button id="menu-icon" class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false"
+            aria-controls="nav-links">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+
+
+        <a href="https://github.com/VictorAlmeidaMarinho" target="_blank" rel="noopener noreferrer" class="visit-btn">
+            Visite meu GitHub
+        </a>
     </header>
 
-    <section id="about" class="about">
-        <div class="about-container">
-            <img src="perfil.png" alt="">
+    <main>
 
-            <div class ="info-box">
+        <!-- Sobre -->
+        <section id="about" class="section about">
+            <div class="about-blob" aria-hidden="true"></div>
 
-                <div class ="text">
-                    <h3>Olá, eu sou</h3>
-                    <h1>Victor Marinho</h1>
-                    <span>Desenvolvedor Front-End</span>
+            <div class="about-container">
+                <div class="about-photo" data-reveal>
+                    <img src="assets/images/perfil.png" alt="Foto de perfil de Victor Marinho">
                 </div>
 
-                <div class="btn-group">
-                    <div class="btn">
-                        Donwload CV
+                <div class="info-box" data-reveal>
+                    <div class="info-text">
+                        <h3>Olá, eu sou</h3>
+                        <h1>Victor Marinho</h1>
+                        <span class="gradient-text">Sistemas Embarcados | IoT | Front-End</span>
                     </div>
-                    <div class="btn">
-                        Contato
-                    </div>
-                </div>
 
-                <div class="socials">
-                    <i class="fa-brands fa-github" ></i>
-                    <i class="fa-brands fa-linkedin-in"></i>
+                    <p class="info-summary">
+                        Estudante de Engenharia de Mecatrônica (4º período) no IFCE, com experiência prática em
+                        <strong>ESP32</strong> e <strong>Arduino</strong> usando ESP-IDF e FreeRTOS. Também construo
+                        interfaces web responsivas com HTML, CSS e JavaScript, conectando <strong>hardware e
+                            software</strong>
+                        para controle e automação.
+                    </p>
+
+                    <div class="btn-group">
+                        <a href="assets/Currículo_Victor_Almeida_Marinho_Rego.pdf"
+                            download="Currículo-Victor-Marinho.pdf" class="btn">
+                            <i class="fa-solid fa-download"></i> Download Currículo
+                        </a>
+                        <a href="#contact" class="btn btn--filled">
+                            <i class="fa-solid fa-paper-plane"></i> Fale comigo
+                        </a>
+                    </div>
+
+                    <div class="socials">
+                        <a href="https://github.com/VictorAlmeidaMarinho" target="_blank" rel="noopener noreferrer"
+                            aria-label="GitHub">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/victor-almeida-marinho-rego-43889a330/" target="_blank"
+                            rel="noopener noreferrer" aria-label="LinkedIn">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://www.instagram.com/victoralmeidamr/" target="_blank" rel="noopener noreferrer"
+                            aria-label="Instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <section id="experience" class="experience">
-        <h2 class="section-title">Experiência</h2>
+            <ul class="stats" data-reveal>
+                <li class="stat"><strong>4º</strong><span>período de Mecatrônica</span></li>
+                <li class="stat"><strong>6</strong><span>projetos técnicos</span></li>
+                <li class="stat"><strong>B2</strong><span>inglês intermediário superior</span></li>
+            </ul>
+        </section>
 
-        <div class="experience-info">
-            <div class="grid">
-                <div class="grid-card">
-                    
-                    <i class="fa-solid fa-code"></i>
-                    <span>Desenvolvedor Front-End</span>
-                    <h3>5 anos</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur 
-                    adipiscing elit.</p>
-                </div>
+        <!-- Habilidades -->
+        <section id="skills" class="section skills">
+            <h2 class="section-title" data-reveal>Habilidades</h2>
 
-                <div class="grid-card">
+            <div class="skills-grid">
+                <article class="skill-card" data-reveal>
+                    <i class="fa-solid fa-terminal"></i>
+                    <h3>Linguagens</h3>
+                    <ul class="tags">
+                        <li>C</li>
+                        <li>C++</li>
+                        <li>C#</li>
+                        <li>Python</li>
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                        <li>JavaScript</li>
+                    </ul>
+                </article>
 
+                <article class="skill-card" data-reveal>
+                    <i class="fa-solid fa-microchip"></i>
+                    <h3>Sistemas Embarcados</h3>
+                    <ul class="tags">
+                        <li>ESP32</li>
+                        <li>Arduino</li>
+                        <li>ESP-IDF</li>
+                        <li>Arduino IDE</li>
+                        <li>FreeRTOS</li>
+                    </ul>
+                </article>
+
+                <article class="skill-card" data-reveal>
+                    <i class="fa-solid fa-globe"></i>
+                    <h3>Desenvolvimento Web</h3>
+                    <ul class="tags">
+                        <li>Interfaces responsivas</li>
+                        <li>DOM</li>
+                        <li>Eventos</li>
+                        <li>Consumo de dados</li>
+                    </ul>
+                </article>
+
+                <article class="skill-card" data-reveal>
+                    <i class="fa-solid fa-cube"></i>
+                    <h3>CAD e Modelagem 3D</h3>
+                    <ul class="tags">
+                        <li>Solid Edge</li>
+                        <li>Inventor</li>
+                        <li>Fusion 360</li>
+                        <li>Onshape</li>
+                        <li>Blender</li>
+                    </ul>
+                </article>
+
+                <article class="skill-card" data-reveal>
                     <i class="fa-brands fa-figma"></i>
-                    <span>UI/UX Designer</span>
-                    <h3>5 anos</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur 
-                    adipiscing elit.</p>
-                </div>
+                    <h3>UI/UX</h3>
+                    <ul class="tags">
+                        <li>Figma</li>
+                        <li>Prototipação</li>
+                        <li>Organização visual</li>
+                    </ul>
+                </article>
 
-                <div class="grid-card">
+                <article class="skill-card" data-reveal>
+                    <i class="fa-solid fa-chart-column"></i>
+                    <h3>Dados</h3>
+                    <ul class="tags">
+                        <li>Microsoft Excel</li>
+                        <li>Tratamento</li>
+                        <li>Análise</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
 
+        <!-- Experiência -->
+        <section id="experience" class="section experience">
+            <h2 class="section-title" data-reveal>Experiência</h2>
+
+            <div class="grid">
+                <article class="grid-card" data-reveal>
+                    <i class="fa-solid fa-code"></i>
+                    <h3 class="card-title">Desenvolvedor Front-End</h3>
+                    <p>
+                        Implementação de <span>HTML</span>, <span>CSS</span> e <span>JavaScript</span>
+                        para a concepção visual de <span>landing pages</span>.
+                    </p>
+                </article>
+
+                <article class="grid-card" data-reveal>
+                    <i class="fa-brands fa-figma"></i>
+                    <h3 class="card-title">UI/UX Designer</h3>
+                    <p>
+                        Desenvolvimento de layouts, wireframes e experiências para <span>aplicações web</span>.
+                    </p>
+                </article>
+
+                <article class="grid-card" data-reveal>
+                    <i class="fa-solid fa-robot"></i>
+                    <h3 class="card-title">Interfaces IoT</h3>
+                    <p>
+                        Desenvolvimento de interfaces web e <span>dashboards</span> para aplicações em <span>IoT</span>.
+                    </p>
+                </article>
+
+                <article class="grid-card" data-reveal>
                     <i class="fa-solid fa-paintbrush"></i>
-                    <span>Designer Gráfico</span>
-                    <h3>5 anos</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur 
-                    adipiscing elit.</p>
-                </div>
-
+                    <h3 class="card-title">Designer Gráfico</h3>
+                    <p>
+                        Criação de <span>Manual de Marca</span>, <span>Logotipo</span> e <span>Identidade Visual</span>.
+                    </p>
+                </article>
             </div>
 
-            <img src="perfil.png" alt=""></img>
-        </div>
-    </section>
+            <h3 class="subsection-title" data-reveal>Trajetória</h3>
 
-    <section id="projects" class="projects">
-        <h2 class="section-title">Projetos recentes</h2>
+            <ol class="timeline">
+                <li class="timeline-item" data-reveal>
+                    <span class="timeline-date">2026</span>
+                    <h4>Gerente de Projetos — EngrenaTech Empresa Júnior (IFCE)</h4>
+                    <p>
+                        Gestão de projetos de IoT e sistemas embarcados, com planejamento e acompanhamento de
+                        soluções de automação, controle e monitoramento.
+                    </p>
+                </li>
 
-        <div class="projects-grid">
-            <div class="project-card">
-                <img src="project1.webp" alt="">
-                <h3>Projeto Alpha</h3>
-                <p>20.Lorem ipsum dolor sit amet, consectetur 
-                    adipiscing elit.</p>
+                <li class="timeline-item" data-reveal>
+                    <span class="timeline-date">2026</span>
+                    <h4>Centro Acadêmico de Engenharia de Mecatrônica (IFCE)</h4>
+                    <p>
+                        Suporte na comunicação entre alunos e professores e na organização de eventos acadêmicos.
+                    </p>
+                </li>
 
-                <div class="btn-group">
-                    <div class="btn">Github demo</div>
-                </div>
+                <li class="timeline-item" data-reveal>
+                    <span class="timeline-date">2024</span>
+                    <h4>Ágora Empresa Júnior (UEMA)</h4>
+                    <p>
+                        Análise e adequação de processos conforme a NR-12 e criação de estratégias de marketing
+                        digital para Instagram e LinkedIn.
+                    </p>
+                </li>
+            </ol>
+        </section>
+
+        <!-- Projetos -->
+        <section id="projects" class="section projects">
+            <h2 class="section-title" data-reveal>Projetos recentes</h2>
+
+            <div class="projects-grid">
+
+                <article class="project-card" data-reveal>
+                    <div class="project-cover project-cover--icon" aria-hidden="true">
+                        <i class="fa-solid fa-hands"></i>
+                    </div>
+                    <h3>Reconhecimento de LIBRAS com IA</h3>
+                    <p>
+                        Visão computacional para reconhecer sinais de LIBRAS em tempo real a partir da webcam,
+                        com modelo treinado no Teachable Machine e executado com TensorFlow/Keras.
+                    </p>
+                    <ul class="tags">
+                        <li>Python</li>
+                        <li>TensorFlow</li>
+                        <li>Keras</li>
+                        <li>OpenCV</li>
+                    </ul>
+                </article>
+
+                <article class="project-card" data-reveal>
+                    <div class="project-cover project-cover--icon" aria-hidden="true">
+                        <i class="fa-solid fa-lightbulb"></i>
+                    </div>
+                    <h3>IoT: Controle Remoto de LED</h3>
+                    <p>
+                        Servidor Web e WebSocket no ESP32-S3 com sincronização bidirecional entre interface web e
+                        botão físico, dados em JSON, data e hora via NTP e registro de eventos no Monitor Serial.
+                    </p>
+                    <ul class="tags">
+                        <li>ESP32-S3</li>
+                        <li>C++</li>
+                        <li>WebSocket</li>
+                        <li>JSON</li>
+                    </ul>
+                </article>
+
+                <article class="project-card" data-reveal>
+                    <div class="project-cover project-cover--icon" aria-hidden="true">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+                    <h3>Controle de LEDs por Interrupção</h3>
+                    <p>
+                        Interrupções de GPIO (ISR) com debounce, comunicação entre ISR e tarefa por filas e
+                        processamento assíncrono dos eventos com FreeRTOS.
+                    </p>
+                    <ul class="tags">
+                        <li>ESP32-S2</li>
+                        <li>C</li>
+                        <li>ESP-IDF</li>
+                        <li>FreeRTOS</li>
+                    </ul>
+                </article>
+
+                <article class="project-card" data-reveal>
+                    <img class="project-cover" src="assets/images/screen-checkfilmes.png"
+                        alt="Captura de tela do painel Check Filmes" loading="lazy">
+                    <h3>Check Filmes — Painel Interativo</h3>
+                    <p>
+                        Checklist visual de filmes: marque o que já assistiu e o estado permanece salvo no navegador
+                        via localStorage. Dados carregados de JSON e aplicação containerizada com Docker e Nginx.
+                    </p>
+                    <ul class="tags">
+                        <li>JavaScript</li>
+                        <li>JSON</li>
+                        <li>Docker</li>
+                        <li>Nginx</li>
+                    </ul>
+                    <a href="https://github.com/VictorAlmeidaMarinho/check-films" target="_blank"
+                        rel="noopener noreferrer" class="btn">
+                        <i class="fa-brands fa-github"></i> Ver no GitHub
+                    </a>
+                </article>
+
+                <article class="project-card" data-reveal>
+                    <img class="project-cover" src="assets/images/screen-institucional-website.png"
+                        alt="Captura de tela do website institucional" loading="lazy">
+                    <h3>Website Institucional</h3>
+                    <p>
+                        Site institucional interativo de uma empresa fictícia de Inteligência Artificial.
+                    </p>
+                    <ul class="tags">
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                        <li>JavaScript</li>
+                    </ul>
+                    <a href="https://github.com/VictorAlmeidaMarinho/institucional-website" target="_blank"
+                        rel="noopener noreferrer" class="btn tags">
+                        <i class="fa-brands fa-github"></i> Ver no GitHub
+                    </a>
+                </article>
+
+                <article class="project-card" data-reveal>
+                    <div class="project-cover project-cover--icon" aria-hidden="true">
+                        <i class="fa-solid fa-id-card"></i>
+                    </div>
+                    <h3>Portfólio Pessoal</h3>
+                    <p>
+                        Landing page responsiva com informações de contato, projetos e habilidades — este site.
+                    </p>
+                    <ul class="tags">
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                        <li>JavaScript</li>
+                    </ul>
+                </article>
+
             </div>
+        </section>
 
-            <div class="project-card">
-                <img src="project2.webp" alt="">
-                <h3>Projeto Beta</h3>
-                <p>20.Lorem ipsum dolor sit amet, consectetur 
-                    adipiscing elit.</p>
+        <!-- Formação -->
+        <section id="education" class="section education">
+            <h2 class="section-title" data-reveal>Formação</h2>
 
-                <div class="btn-group">
-                    <div class="btn">Github demo</div>
-                </div>
+            <div class="education-grid">
+
+                <article class="edu-card" data-reveal>
+                    <h3><i class="fa-solid fa-graduation-cap"></i> Formação acadêmica</h3>
+                    <p class="edu-highlight">Bacharelado em Engenharia de Mecatrônica</p>
+                    <p>IFCE — Campus Fortaleza · 2025 – 2030</p>
+                </article>
+
+                <article class="edu-card" data-reveal>
+                    <h3><i class="fa-solid fa-certificate"></i> Certificações</h3>
+                    <ul class="edu-list">
+                        <li>
+                            <strong>Mentoria Huawei ICT Academy</strong> — IFCE Fortaleza, 2026<br>
+                            Programação, computação em nuvem, redes, modelagem 3D, IA e UI/UX.
+                        </li>
+                        <li>
+                            <strong>Fusion 360</strong> — Carão da Indústria, SESI, 2025<br>
+                            Modelagem 3D para fabricação de peças em impressoras 3D.
+                        </li>
+                    </ul>
+                </article>
+
+                <article class="edu-card" data-reveal>
+                    <h3><i class="fa-solid fa-book-open"></i> Em andamento</h3>
+                    <ul class="edu-list">
+                        <li><strong>Embarcados</strong> (Fábio Souza) — PCB, Firmware, FreeRTOS e IoT</li>
+                        <li><strong>Python 3 do básico ao avançado</strong> (Luiz Otávio Miranda)</li>
+                        <li><strong>Desenvolvimento Web Completo</strong> (João Ribeiro) — HTML5, CSS3, JS, PHP</li>
+                    </ul>
+                </article>
+
+                <article class="edu-card" data-reveal>
+                    <h3><i class="fa-solid fa-language"></i> Idiomas</h3>
+                    <ul class="edu-list">
+                        <li><strong>Português</strong> — Nativo</li>
+                        <li><strong>Inglês</strong> — B2, intermediário superior</li>
+                        <li><strong>Espanhol</strong> — Básico</li>
+                    </ul>
+                </article>
+
             </div>
-        </div>
-    </section>
+        </section>
 
-    <footer>
-        <ul>
-            <li>
-                <a href="#about">Sobre</a>
-            </li>
-            <li>
-                <a href="#experience">Experiência</a>
-            </li>
-            <li>
-                <a href="#projects">Projetos</a>
-            </li>
+        <!-- Contato -->
+        <section id="contact" class="section contact">
+            <h2 class="section-title" data-reveal>Vamos conversar?</h2>
+            <p class="contact-lead" data-reveal>
+                Aberto a oportunidades em robótica, firmware, IoT e desenvolvimento Front-End.
+            </p>
+
+            <ul class="contact-list" data-reveal>
+                <div>
+                    <li>
+                        <a href="mailto:v.almeida.m.r@gmail.com" class="contact-item">
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>v.almeida.m.r@gmail.com</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="tel:+5598985231224" class="contact-item">
+                            <i class="fa-solid fa-phone"></i>
+                            <span>(98) 98523-1224</span>
+                        </a>
+                    </li>
+                </div>
+                <li>
+                    <span id="location" class="contact-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Fortaleza, CE — Brasil</span>
+                    </span>
+                </li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <ul class="footer-links">
+            <li><a href="#about">Sobre</a></li>
+            <li><a href="#skills">Habilidades</a></li>
+            <li><a href="#experience">Experiência</a></li>
+            <li><a href="#projects">Projetos</a></li>
+            <li><a href="#contact">Contato</a></li>
         </ul>
-        <p class = "copyright">&copy; 2026 Victor Almeida Marinho Rego. Todos os direitos reservados.</p>
+        <p class="copyright">
+            &copy; <span id="current-year">2026</span> Victor Almeida Marinho Rego. Todos os direitos reservados.
+        </p>
     </footer>
 
     <script src="script.js"></script>
 </body>
+
+=======
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Inteligência Artificial</title>
+    
+    <!-- Estilos da página-->
+    <link rel="stylesheet" href="assets/css/estilos.css">
+
+    <!-- favicon-->
+     <link rel="shortcut icon" href="assets/images/logo_empresa.png" type="image/png">
+</head>
+
+<body>
+    <!-- cabeçalho-->
+    <header class = "container-cabecalho">
+        <a href="index.html">
+            <img src="assets/images/logo_empresa.png" alt="Logo da empresa" title = "Inteligência Artificial">
+        </a>
+        <h3>Inteligência Artificial</h3>
+    </header>
+
+    <!-- Navegação-->
+    <nav class ="container-navegacao">
+        <a href="index.html">Quem somos</a>
+        <a href="servicos.html">Nossos serviços</a>
+        <a href="contatos.html">Contatos</a>
+    </nav>
+
+    <!-- Quem somos-->
+    <section class = "container-quem-somos">
+
+        <!-- I.A-->
+        <article class = "servico">
+            <img src="assets/images/icon_ai.png" alt="Inteligência Artificial" class = "icone">
+            <p class = "servico-texto">
+                Somos especialistas em <span class = "servico-texto-realce">Inteligência Artificial(I.A)</span> 
+                <br>
+                Trabalhamos para encontrar soluções tecnologicamente inteligentes para todas as áreas empresariais.
+            </p>
+        </article>
+
+        <!-- Laboratórios-->
+        <article class = "servico">
+            <img src="assets/images/icon_lab.png" alt="Laboratório moderno" class = "icone">
+            <p class = "servico-texto">
+                Os nossos laboratórios são os <span class = "servico-texto-realce">mais modernos</span> da atualidade.
+            </p>
+        </article>
+
+        <!-- Técnicos-->
+        <article class = "servico">
+            <img src="assets/images/icon_computer.png" alt="Programadores experientes" class = "icone">
+            <p class = "servico-texto">
+                Os nossos colaboradores são os técnicos <span class = "servico-texto-realce">mais experientes</span> do mercado.
+            </p>
+        </article>
+    </section>
+
+    <!-- Obter mais Informações-->
+    <section class = "container-servicos-contatos">
+        <h1>Obtenha mais informações na área de serviços e contate-nos</h1>
+        <div class = "botoes-servicos-contatos">
+            <a href="servicos.html">Ver Serviços</a>
+            <a href="contatos.html">Ver Contatos</a>
+        </div>
+    </section>
+
+    <footer>
+        Inteligencia Artificial &copy; 2030 | &reg; Todos os direitos reservados.
+    </footer>
+    
+</body>
+
+>>>>>>> origin/main
 </html>
